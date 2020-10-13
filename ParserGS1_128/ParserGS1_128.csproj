@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Библиотека для разбора строки, полученной со сканера, в соответствии с словарем Code-128 (GS1-128).</Description>
+    <Authors>Artem Buskunov</Authors>
+    <Company>ArtemBuskunov</Company>
+    <RepositoryUrl>https://github.com/ArtemBuskunov/ParserGS1_128</RepositoryUrl>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Version>1.0.10</Version>
+    <RootNamespace>ParserGS1</RootNamespace>
+    <PackageProjectUrl>https://github.com/ArtemBuskunov/ParserGS1_128</PackageProjectUrl>
+    <PackageTags>gs1, gs1-128, ean-128</PackageTags>
+    <UserSecretsId>59476462-b3fe-4fc0-a216-4977d3179a29</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\Users\Artem\source\repos\ParserGS1_128\ParserGS1_128.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="ParserGS1.csproj" />
+  </ItemGroup>
+
+</Project>
