@@ -42,4 +42,4 @@
               
 ```
 ![Диаграмма классов](http://service-debug.ru/Content/ParserGS1_128_1.png)
-![Диаграмма последовательности](http://service-debug.ru/Content/ParserGS1_128_2.bmp)
+![Диаграмма последовательности](http://service-debug.ru/Content/ParserGS1_128_2.png)
