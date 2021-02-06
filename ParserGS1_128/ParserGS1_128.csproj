@@ -9,7 +9,7 @@
     <RepositoryUrl>https://github.com/ArtemBuskunov/ParserGS1_128</RepositoryUrl>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Version>1.0.10</Version>
+    <Version>1.0.11</Version>
     <RootNamespace>ParserGS1</RootNamespace>
     <PackageProjectUrl>https://github.com/ArtemBuskunov/ParserGS1_128</PackageProjectUrl>
     <PackageTags>gs1, gs1-128, ean-128</PackageTags>

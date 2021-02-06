@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>ParserGS1_128</id>
-    <version>1.0.10</version>
+    <version>1.0.11</version>
     <authors>Artem Buskunov</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectUrl>https://github.com/ArtemBuskunov/ParserGS1_128</projectUrl>

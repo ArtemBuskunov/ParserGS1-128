@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Библиотека для разбора строки, полученной со сканера, в соответствии с словарем C" +
     "ode-128 (GS1-128).")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.10")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.11")]
 [assembly: System.Reflection.AssemblyProductAttribute("ParserGS1_128")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ParserGS1_128")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
