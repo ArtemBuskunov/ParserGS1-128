@@ -6,9 +6,7 @@ using System.Runtime.CompilerServices;
 
 namespace ParserGS1
 {
-    /// <summary>
-    /// Парсер строки, советующей требованиям GS1
-    /// </summary>
+    /// <summary> Парсер строки, советующей требованиям GS1</summary>
     public class Parser : INotifyPropertyChanged
     {
         private static char groutSeperator = (char)29;
@@ -25,18 +23,12 @@ namespace ParserGS1
         public RuleKeyAI this[string key] => AIFields[key];
 
 
-        /// <summary>
-        /// Парсер строки, советующей требованиям GS1
-        /// </summary>
+        /// <summary> Парсер строки, советующей требованиям GS1 </summary>
         public Parser() : this(new IStrategyResults[] { }, new DefaultResult()) { }
-        /// <summary>
-        /// Парсер строки, советующей требованиям GS1
-        /// </summary>
+        /// <summary> Парсер строки, советующей требованиям GS1 </summary>
         /// <param name="StrategyResults">Массив стратегий для объектов-результатов</param>
         public Parser(IStrategyResults[] StrategyResults) : this(StrategyResults, new DefaultResult()) { }
-        /// <summary>
-        /// Парсер строки, советующей требованиям GS1
-        /// </summary>
+        /// <summary> Парсер строки, советующей требованиям GS1 </summary>
         /// <param name="StrategyResults">Массив стратегий для объектов-результатов</param>
         /// <param name="defaultParseType">Объект-результат используемый если другие варианты не подходят</param>
         public Parser(IStrategyResults[] StrategyResults, DefaultResult defaultParseType)
@@ -47,17 +39,11 @@ namespace ParserGS1
         }
 
 
-        /// <summary>
-        /// Объект-результат после парсинга
-        /// </summary>
+        /// <summary> Объект-результат после парсинга </summary>
         public IStrategyResults Result { get { return ResultFactory.Result; } }
-        /// <summary>
-        /// Полученые значения
-        /// </summary>
+        /// <summary> Полученые значения </summary>
         public Dictionary<string, RuleKeyAI> ValuesAI => AIFields;
-        /// <summary>
-        /// идентификаторы применения, по которым проводится проверка при анализе строки
-        /// </summary>
+        /// <summary> идентификаторы применения, по которым проводится проверка при анализе строки </summary>
         public RuleKeyAI[] RuleTags
         {
             get { return ruleTags; }
@@ -66,9 +52,7 @@ namespace ParserGS1
 
         public static string GroutSeperatorUser => groutSeperatorUser;
 
-        /// <summary>
-        /// Установить строку для анализа и разбора на поля
-        /// </summary>
+        /// <summary> Установить строку для анализа и разбора на поля </summary>
         /// <param name="CodeWithGS">Строка, удовлетворяющая требованиям GS1 </param>
         public void SetText(string CodeWithGS)
         {
@@ -99,9 +83,7 @@ namespace ParserGS1
         }
         public void OnPropertyChanged([CallerMemberName] string prop = "")
         { if (PropertyChanged != null) PropertyChanged(this, new PropertyChangedEventArgs(prop)); }
-        /// <summary>
-        /// Установить свои символы начального (вместо FNC1) и разделительного (вместо GS)
-        /// </summary>
+        /// <summary> Установить свои символы начального (вместо FNC1) и разделительного (вместо GS) </summary>
         /// <param name="_GroutSeperatorUser">Разделительный символ вместо  GS</param>
         /// <param name="_StartCodeUser">Начальный символ вместо FNC1</param>
         public static void SetGroutSeperatorUser(string _GroutSeperatorUser, string _StartCodeUser)

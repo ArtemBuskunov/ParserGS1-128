@@ -2,9 +2,7 @@
 
 namespace ParserGS1
 {
-    /// <summary>
-    /// Объект-результат используемый если другие варианты не подходят
-    /// </summary>
+    /// <summary> Объект-результат используемый если другие варианты не подходят </summary>
     public class DefaultResult : IStrategyResults
     {
         public DefaultResult() { }

@@ -5,12 +5,6 @@ VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParserGS1_128", "ParserGS1_128.csproj", "{D9CD5BD3-7CDF-4188-906A-4864268E801A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestParser", "..\UnitTestParser\UnitTestParser.csproj", "{5C4D1BD1-DA08-47FA-A82F-59BC4FEF8C3D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EAN128Parser", "..\ScanerQr\ClassLibrary1\EAN128Parser.csproj", "{2ED4F7E4-2306-4DF3-81C4-4A84BB9AE066}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestParser", "..\ScanerQr\TestParser\TestParser.csproj", "{294CC80F-22DD-419F-89AE-548282C91019}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,18 +15,6 @@ Global
 		{D9CD5BD3-7CDF-4188-906A-4864268E801A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9CD5BD3-7CDF-4188-906A-4864268E801A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9CD5BD3-7CDF-4188-906A-4864268E801A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5C4D1BD1-DA08-47FA-A82F-59BC4FEF8C3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5C4D1BD1-DA08-47FA-A82F-59BC4FEF8C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5C4D1BD1-DA08-47FA-A82F-59BC4FEF8C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5C4D1BD1-DA08-47FA-A82F-59BC4FEF8C3D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2ED4F7E4-2306-4DF3-81C4-4A84BB9AE066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2ED4F7E4-2306-4DF3-81C4-4A84BB9AE066}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2ED4F7E4-2306-4DF3-81C4-4A84BB9AE066}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2ED4F7E4-2306-4DF3-81C4-4A84BB9AE066}.Release|Any CPU.Build.0 = Release|Any CPU
-		{294CC80F-22DD-419F-89AE-548282C91019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{294CC80F-22DD-419F-89AE-548282C91019}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{294CC80F-22DD-419F-89AE-548282C91019}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{294CC80F-22DD-419F-89AE-548282C91019}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

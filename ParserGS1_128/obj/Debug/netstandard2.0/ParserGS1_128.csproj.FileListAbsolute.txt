@@ -1,0 +1,8 @@
+C:\Users\Artem\source\repos\ParserGS1_128\bin\Debug\netstandard2.0\ParserGS1_128.deps.json
+C:\Users\Artem\source\repos\ParserGS1_128\bin\Debug\netstandard2.0\ParserGS1_128.dll
+C:\Users\Artem\source\repos\ParserGS1_128\bin\Debug\netstandard2.0\ParserGS1_128.pdb
+C:\Users\Artem\source\repos\ParserGS1_128\obj\Debug\netstandard2.0\ParserGS1_128.AssemblyInfoInputs.cache
+C:\Users\Artem\source\repos\ParserGS1_128\obj\Debug\netstandard2.0\ParserGS1_128.AssemblyInfo.cs
+C:\Users\Artem\source\repos\ParserGS1_128\obj\Debug\netstandard2.0\ParserGS1_128.csproj.CoreCompileInputs.cache
+C:\Users\Artem\source\repos\ParserGS1_128\obj\Debug\netstandard2.0\ParserGS1_128.dll
+C:\Users\Artem\source\repos\ParserGS1_128\obj\Debug\netstandard2.0\ParserGS1_128.pdb

@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ParserGS1_128</name>
+    </assembly>
+    <members>
+        <member name="T:ParserGS1.DefaultResult">
+            <summary>
+            Объект-результат используемый если другие варианты не подходят
+            </summary>
+        </member>
+        <member name="T:ParserGS1.IStrategyResults">
+            <summary>
+            Стратегия для объектов-результатов
+            </summary>
+        </member>
+        <member name="P:ParserGS1.IStrategyResults.PrecedenceLevel">
+            <summary>
+            Приоритет выбора объекта для случаев со схожими полями, чем выше число, тем выше приоритет формирования
+            </summary>
+        </member>
+        <member name="M:ParserGS1.IStrategyResults.IsTypeResult(System.Collections.Generic.Dictionary{System.String,ParserGS1.RuleKeyAI})">
+            <summary>
+            Проверить на соответствие типу
+            </summary>
+            <param name="RuleKeys">набор полученных полей из кода</param>
+        </member>
+        <member name="M:ParserGS1.IStrategyResults.CompletingFields(System.String,System.String[],System.Collections.Generic.Dictionary{System.String,ParserGS1.RuleKeyAI})">
+            <summary>
+            Заполнить поля объекта
+            </summary>
+            <param name="fullStrings">Полная строка из кода, без преобразования</param>
+            <param name="codeStrings">Подстроки </param>
+            <param name="RuleKeys">набор полученных полей из кода</param>
+            <returns></returns>
+        </member>
+        <member name="M:ParserGS1.IStrategyResults.ActionAfterCompletingFields">
+            <summary>
+            Действие после заполнения полей, если объект соответствует
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ParserGS1.Parser">
+            <summary>
+            Парсер строки, советующей требованиям GS1
+            </summary>
+        </member>
+        <member name="M:ParserGS1.Parser.#ctor">
+            <summary>
+            Парсер строки, советующей требованиям GS1
+            </summary>
+        </member>
+        <member name="M:ParserGS1.Parser.#ctor(ParserGS1.IStrategyResults[])">
+            <summary>
+            Парсер строки, советующей требованиям GS1
+            </summary>
+            <param name="StrategyResults">Массив стратегий для объектов-результатов</param>
+        </member>
+        <member name="M:ParserGS1.Parser.#ctor(ParserGS1.IStrategyResults[],ParserGS1.DefaultResult)">
+            <summary>
+            Парсер строки, советующей требованиям GS1
+            </summary>
+            <param name="StrategyResults">Массив стратегий для объектов-результатов</param>
+            <param name="defaultParseType">Объект-результат используемый если другие варианты не подходят</param>
+        </member>
+        <member name="P:ParserGS1.Parser.Result">
+            <summary>
+            Объект-результат после парсинга
+            </summary>
+        </member>
+        <member name="P:ParserGS1.Parser.ValuesAI">
+            <summary>
+            Полученые значения
+            </summary>
+        </member>
+        <member name="P:ParserGS1.Parser.RuleTags">
+            <summary>
+            идентификаторы применения, по которым проводится проверка при анализе строки
+            </summary>
+        </member>
+        <member name="M:ParserGS1.Parser.SetText(System.String)">
+            <summary>
+            Установить строку для анализа и разбора на поля
+            </summary>
+            <param name="CodeWithGS">Строка, удовлетворяющая требованиям GS1 </param>
+        </member>
+        <member name="M:ParserGS1.Parser.SetGroutSeperatorUser(System.String,System.String)">
+            <summary>
+            Установить свои символы начального (вместо FNC1) и разделительного (вместо GS)
+            </summary>
+            <param name="_GroutSeperatorUser">Разделительный символ вместо  GS</param>
+            <param name="_StartCodeUser">Начальный символ вместо FNC1</param>
+        </member>
+        <member name="T:ParserGS1.ResultFactory">
+            <summary>
+            Фабрика результатов сканирования, подбирает объект и инициализирует его по полученному словарю тегов
+            </summary>
+        </member>
+        <member name="M:ParserGS1.ResultFactory.#ctor(ParserGS1.IStrategyResults[],ParserGS1.DefaultResult)">
+            <summary>
+            Фабрика результатов сканирования, подбирает объект и инициализирует его по полученному словарю тегов
+            </summary>
+            <param name="StrategyResults">Массив стратегий для объектов-результатов</param>
+            <param name="defaultParseType">Объект-результат используемый если другие варианты не подходят</param>
+        </member>
+        <member name="P:ParserGS1.ResultFactory.Result">
+            <summary>
+            Полученный объект-результат после обработки
+            </summary>
+        </member>
+        <member name="T:ParserGS1.RuleKeyAI">
+            <summary>
+            Абстрактный класс тега
+            </summary>
+        </member>
+        <member name="P:ParserGS1.RuleKeyAI.TextAfterProcessing">
+            <summary>
+            Строка после удаления данных относящихся к тегу
+            </summary>
+        </member>
+        <member name="P:ParserGS1.RuleKeyAI.Value">
+            <summary>
+            Значение
+            </summary>
+        </member>
+        <member name="P:ParserGS1.RuleKeyAI.KeyAI">
+            <summary>
+            идентификаторы применения из словарь Code-128
+            </summary>
+        </member>
+        <member name="M:ParserGS1.RuleKeyAI.Set(System.String,System.Collections.Generic.Dictionary{System.String,ParserGS1.RuleKeyAI}@)">
+            <summary>
+            Выполнить проверки и выделение значение для тега
+            </summary>
+            <param name="Text">Текст для проверки и обработки</param>
+            <param name="HandlerFields">Словарь обнаруженных тегов и значений</param>
+        </member>
+        <member name="T:ParserGS1.StrategyKeyAI.FixedLengthStrategy">
+            <summary>
+            Обработчик строк для тегов с постоянной длиной данных
+            </summary>
+        </member>
+        <member name="M:ParserGS1.StrategyKeyAI.FixedLengthStrategy.#ctor(System.Int32,System.String)">
+            <summary>
+            Стратегия обработчик строк для тегов с постоянной длиной данных
+            </summary>
+            <param name="FieldLength">Фиксирования длина данных с тегом, имеет значение при использовании FixedLength</param>
+            <param name="keyAI">идентификатор применения</param>
+        </member>
+        <member name="M:ParserGS1.StrategyKeyAI.FixedLengthStrategy.#ctor(System.Int32,System.Int32,System.String)">
+            <summary>
+            Стратегия обработчик строк для тегов с постоянной длиной данных
+            </summary>
+            <param name="_KeyLength_Whole">Полная длина идентификатора применения</param>
+            <param name="FieldLength">Фиксирования длина данных с тегом, имеет значение при использовании FixedLength</param>
+            <param name="keyAI">идентификатор применения</param>
+        </member>
+        <member name="T:ParserGS1.StrategyKeyAI.VariableLengthStrategy">
+            <summary>
+            Обработчик строк для тегов с переменой длиной данных
+            </summary>
+        </member>
+        <member name="M:ParserGS1.StrategyKeyAI.VariableLengthStrategy.#ctor(System.Int32,System.String)">
+            <summary>
+            Стратегия обработчик строк для тегов с переменой длиной данных
+            </summary>
+            <param name="FieldLength">Фиксирования длина данных с тегом, имеет значение при использовании FixedLength</param>
+            <param name="keyAI">идентификатор применения</param>
+        </member>
+        <member name="M:ParserGS1.StrategyKeyAI.VariableLengthStrategy.#ctor(System.Int32,System.Int32,System.String)">
+            <summary>
+            Стратегия обработчик строк для тегов с переменой длиной данных
+            </summary>
+            <param name="_KeyLength_Whole">Полная длина идентификатора применения</param>
+            <param name="FieldLength">Фиксирования длина данных с тегом, имеет значение при использовании FixedLength</param>
+            <param name="keyAI">идентификатор применения</param>
+        </member>
+        <member name="P:ParserGS1.StrategyResults.KeysAI">
+            <summary>
+            Набор обязательных полей в объекте
+            </summary>
+        </member>
+        <member name="T:ParserGS1.TextParsingStrategy">
+            <summary>
+            Абстрактный класс стратегии обработки строки тега:
+            <para>-	Проверка соответствия тегу</para>
+            <para>-	Выделения значения, относящегося к тегу</para>
+            <para>-	Удаления данных из строки относящихся к тегу</para>
+            </summary>
+        </member>
+        <member name="M:ParserGS1.TextParsingStrategy.#ctor(System.Int32,System.String)">
+            <summary>
+            Стратегия обработки строки для тега
+            </summary>
+            <param name="fieldLength">Фиксирования длина данных с тегом, имеет значение при использовании FixedLength</param>
+            <param name="keyAI">идентификатор применения</param>
+        </member>
+        <member name="M:ParserGS1.TextParsingStrategy.#ctor(System.Int32,System.Int32,System.String)">
+            <summary>
+            Стратегия обработки строки для тега
+            </summary>
+            <param name="_KeyLength_Whole">Полная длина идентификатора применения</param>
+            <param name="fieldLength">Фиксирования длина данных с тегом, имеет значение при использовании FixedLength</param>
+            <param name="keyAI">идентификатор применения</param>
+        </member>
+        <member name="P:ParserGS1.TextParsingStrategy.KeyLength_Wanted">
+            <summary>
+            Длина искомой части идентификатора применения
+            </summary>
+        </member>
+        <member name="P:ParserGS1.TextParsingStrategy.KeyLength_Whole">
+            <summary>
+            Полная длина идентификатора применения
+            </summary>
+        </member>
+        <member name="P:ParserGS1.TextParsingStrategy.FieldLength">
+            <summary>
+            Длина значения в строке для тега, имеет значение при использовании FixedLength
+            </summary>
+        </member>
+        <member name="P:ParserGS1.TextParsingStrategy.ResultText">
+            <summary>
+            Значение тега в виде строки
+            </summary>
+        </member>
+        <member name="P:ParserGS1.TextParsingStrategy.TextAfterProcessing">
+            <summary>
+            Строка после удаления данных относящихся к тегу
+            </summary>
+        </member>
+        <member name="P:ParserGS1.TextParsingStrategy.IsKey">
+            <summary>
+            Тег обнаружен
+            </summary>
+        </member>
+        <member name="M:ParserGS1.TextParsingStrategy.GetValue(System.String)">
+            <summary>
+            Получаем значение из строки
+            </summary>
+            <param name="Text">Строка из кода для обработки</param>
+        </member>
+    </members>
+</doc>

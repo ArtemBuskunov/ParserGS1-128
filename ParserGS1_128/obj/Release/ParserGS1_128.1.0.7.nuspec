@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ParserGS1_128</id>
+    <version>1.0.7</version>
+    <authors>Artem Buskunov</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/ArtemBuskunov/ParserGS1_128</projectUrl>
+    <description>Библиотека для разбора строки, полученной со сканера, в соответствии с словарем Code-128 (GS1-128).</description>
+    <repository url="https://github.com/ArtemBuskunov/ParserGS1_128" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Artem\source\repos\ParserGS1_128\bin\Release\netstandard2.0\ParserGS1_128.dll" target="lib\netstandard2.0\ParserGS1_128.dll" />
+  </files>
+</package>

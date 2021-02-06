@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ParserGS1.Convert
 {
-    public class ToDate1 : IConvert
+    internal class ToDate1 : IConvert
     {
         public object SetValue(RuleKeyAI ruleKey, int A4)
         {

@@ -1,13 +1,9 @@
 ﻿namespace ParserGS1.StrategyKeyAI
 {
-    /// <summary>
-    /// Обработчик строк для тегов с постоянной длиной данных
-    /// </summary>
+    /// <summary> Обработчик строк для тегов с постоянной длиной данных </summary>
     internal class FixedLengthStrategy : TextParsingStrategy
     {
-        /// <summary>
-        /// Стратегия обработчик строк для тегов с постоянной длиной данных
-        /// </summary>
+        /// <summary> Стратегия обработчик строк для тегов с постоянной длиной данных </summary>
         /// <param name="FieldLength">Фиксирования длина данных с тегом, имеет значение при использовании FixedLength</param>
         /// <param name="keyAI">идентификатор применения</param>
         public FixedLengthStrategy(int FieldLength, string KeyAI) : base(FieldLength, KeyAI) { }

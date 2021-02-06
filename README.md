@@ -41,3 +41,5 @@
             string actual = parser["8008"].ToStringValue; // ToStringValue == "990101111230"
               
 ```
+![Диаграмма классов](http://service-debug.ru/Content/ParserGS1_128_1.png)
+![Диаграмма последовательности](http://service-debug.ru/Content/ParserGS1_128_2.bmp)
